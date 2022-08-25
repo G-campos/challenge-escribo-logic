@@ -9,6 +9,8 @@ let sumGroupByThree = 0
 const groupByFive = []
 let sumGroupByFive = 0
 
+let total = 0
+
 const divisibleByThree = (input) => {
     return (input % 3) == 0 ? true : false
 }
@@ -33,13 +35,18 @@ rl.question('Informe um numero inteiro: ', (input) => {
         groupByFive.push(i)
         sumGroupByFive += i
     }
-  } 
+  }
+  
+  total = sumGroupByFive + sumGroupByThree
   
   console.log(`Número divisiveis por 3: ${groupByThree}`)
   console.log(`A soma dos numeros divisiveis por 3 é ${sumGroupByThree} \n`)
 
   console.log(`Número divisiveis por 5: ${groupByFive}`)
   console.log(`A soma dos numeros divisiveis por 5 é ${sumGroupByFive} \n`)
+
+  console.log(`A soma Total é ${total} \n`)
+
 
   rl.close();
 });
